@@ -1,0 +1,9 @@
+طريقة النشر لتفعيل Gemini:
+1. افتحي github.com وأنشئي مستودعًا جديدًا خاصًا (Private).
+2. ارفعي محتويات هذا ZIP بعد فك الضغط إلى جذر المستودع، وليس ملف ZIP نفسه.
+3. من Netlify افتحي مشروع omani-teacher ثم Project configuration > Build & deploy > Continuous deployment واربطِي المستودع عبر Link repository (قد تختلف تسمية الخيار).
+4. إعدادات النشر: Base directory فارغ، Publish directory نقطة (.)، Functions directory netlify/functions. ملف netlify.toml يضبط ذلك تلقائيًا.
+5. احتفظي بمتغير GEMINI_API_KEY الحالي في إعدادات Netlify. تأكدي أنه متاح لوظائف Functions وبيئة Production.
+6. انشري عبر Git؛ بعدها افتحي https://omani-teacher.netlify.app/. لا ترفعي ZIP عبر Netlify Drop مرة أخرى لهذه النسخة.
+7. إذا كان مشروع Netlify الحالي لا يسمح بربط المستودع، يمكن إنشاء موقع Netlify جديد من المستودع، لكن سيحتاج إعداد GEMINI_API_KEY على الموقع الجديد، وسيكون له رابط جديد.
+تنبيه: لا تضعي قيمة المفتاح في GitHub أو أي ملف من الموقع.
